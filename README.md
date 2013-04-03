@@ -1,0 +1,1 @@
+Gold Class Adder will add you to classes on gold for you.
