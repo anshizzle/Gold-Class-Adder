@@ -1,12 +1,16 @@
 {
   "manifest_version": 2,
+   "permissions": [ "background", "tabs"],
+  "background": { "page" : "background.html" },
 
   "name": "Class Adder",
   "description": "Get your computer to sign up for classes for you",
   "version": "1.0",
   "options_page": "options.html",
   "content_scripts": [ {
-    "js": ["login.js"],
+    "js": ["jquery-1.9.1.min.js", "login.js"],
     "matches": [ "*://my.sa.ucsb.edu/gold/*" ]
   } ]
+
+
 }
