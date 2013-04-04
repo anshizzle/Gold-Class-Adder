@@ -40,8 +40,15 @@ else if(page.substring(0,5) == "RESUL") {
 
    //var link = $("td:contains('" + enrollCode +  "')").parent().children().last().children("a").attr('href');
    //chrome.extension.sendRequest({redirect: link});
+   $("td:contains('" + enrollCode +  "')").parent().children().last().children("a").addClass('GoldAdderClass');
+   document.getElementsByClassName("GoldAdderClass")[0].click();
+
 
 } 
+else if(page.substring(0,5) == "ADDST") {
+  document.getElementById("pageContent_AddToScheduleButton").click();
+
+}
 else {
    chrome.extension.sendRequest({redirect: "https://my.sa.ucsb.edu/gold/BasicFindCourses.aspx"});
 
