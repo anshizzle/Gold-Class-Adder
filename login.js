@@ -12,9 +12,9 @@ if(page.substring(0,5) == "LOGIN"){
     		}
     	}
     
- /* chrome.extension.sendRequest({method: "getStatus"}, function(response) {
+ chrome.extension.sendRequest({method: "getStorage"}, function(response) {
     console.log(response.status);
-  });*/
+  });
 
    	var username = localStorage["username"];
    	var username_field = document.getElementById("pageContent_userNameText");
