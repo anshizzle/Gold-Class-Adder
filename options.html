@@ -1,20 +1,183 @@
 <html>
-<head> <title> Gold Adder Options </title>
-<script src="options.js"></script> </head>
+<head> <title> Fool's Gold Options </title>
+<script src="jquery-1.10.2.min.js"></script>
+<script src="jquery-ui-1.10.3.custom.min.js"></script>
+<script src="options.js"></script> 
+<link href="jquery-ui.min.css" type="text/css" rel="stylesheet">
+	<link href="options.css" type="text/css" rel="stylesheet">
+
+</head>
 <body>
 
-Username and Password so the script can log you into gold: <br />
+<div class="wrapper">
 
-<form name="everything">
-Username: <input type="text" id="username"> <br />
-Password: <input type="password" id="password"> <br />
-</form>
+	<h1 align="center">Fool's Gold</h1>
+	<div class="inner_wrapper">
+	<!-- Username and Password so the script can log you into gold: <br /> -->
 
-<button id="save"> Save </button>
+	<form name="goldAdderPreferences">
+	<table>
+		<tr>
+			<td> Username </td><td> <input type="text" name="username" id="username"> </td>
+			<td> Password: </td><td> <input type="password" name="password" id="password"></td>
+		</tr>
+		<tr>
+			<td> Quarter: </td>
+			<td colspan="3">
+				<select class="titledropdown" name="quarter" id="quarter">
+					<option value="1">Winter</option>
+					<option value="2">Spring</option>
+					<option value="3">Summer</option>
+					<option value="4">Fall</option>
+				</select>
+				<input type="text" name="quarter_year" id="quarter_year" value="YYYY"> 
+			</td>
+		</tr>
 
-<div id="response"> </div>
+
+	<tr>
+		<td colspan="4">
+			Pass Time:
+
+			<select class="titledropdown" name="month" id="month">
+				<option value="0">January</option>
+				<option value="1">February</option>
+				<option value="2">March</option>
+				<option value="3">April</option>
+				<option value="4">May</option>
+				<option value="5">June</option>
+				<option value="6">July</option>
+				<option value="7">August</option>
+				<option value="8">September</option>
+				<option value="9">October</option>	
+				<option value="10">November</option>
+				<option value="11">December</option>	
+			</select>
+
+			<input type="text" name="date" id="date" value="DD" style="width:30px;">
+			<input type="text" name="year" id="year" value="YYYY" style="width:50px;"> 
+			<input type="text" name="hour" id="hour" value="HH" style="width:30px;"> :
+			<input type="text" name="min" id="min" value="MM" style="width:30px;">
+		</td>
+	</tr>
+	<tr> <td colspan="4">Input pass time in 24hr time (aka 10am, or for 2pm, the HH would be 14)</td></tr>
+	</table>
 
 
+
+
+	<a href="#" id="manual_add_link" class="button">Add a Class Manually </a>
+	<div id="manual_add">
+	Dept: 
+	<select name="subjectAreaDropDown" id="goldAdder_subjectAreaDropDown" class="titledropdown">
+		<option value="">-Select-</option>
+		<option value="ANTH ">Anthropology                             - ANTH </option>
+		<option value="ART  ">Art                                      - ART  </option>
+		<option value="ARTHI">Art History                              - ARTHI</option>
+		<option value="ARTST">Art Studio                               - ARTST</option>
+		<option value="AS AM">Asian American Studies                   - AS AM</option>
+		<option value="ASTRO">Astronomy                                - ASTRO</option>
+		<option value="BIOL ">Biology (Creative Studies)               - BIOL </option>
+		<option value="BMSE ">Biomolecular Science and Engineering     - BMSE </option>
+		<option value="BL ST">Black Studies                            - BL ST</option>
+		<option value="CH E ">Chemical Engineering                     - CH E </option>
+		<option value="CHEM ">Chemistry and Biochemistry               - CHEM </option>
+		<option value="CH ST">Chicano Studies                          - CH ST</option>
+		<option value="CHIN ">Chinese                                  - CHIN </option>
+		<option value="CLASS">Classics                                 - CLASS</option>
+		<option value="COMM ">Communication                            - COMM </option>
+		<option value="C LIT">Comparative Literature                   - C LIT</option>
+		<option value="CMPSC">Computer Science                         - CMPSC</option>
+		<option value="CNCSP">Counseling, Clinical, School Psychology  - CNCSP</option>
+		<option value="DANCE">Dance                                    - DANCE</option>
+		<option value="EARTH">Earth Science                            - EARTH</option>
+		<option value="EACS ">East Asian Cultural Studies              - EACS </option>
+		<option value="EEMB ">Ecology, Evolution &amp; Marine Biology      - EEMB </option>
+		<option value="ECON ">Economics                                - ECON </option>
+		<option value="ED   ">Education                                - ED   </option>
+		<option value="ECE  ">Electrical Computer Engineering          - ECE  </option>
+		<option value="ENGR ">Engineering Sciences                     - ENGR </option>
+		<option value="ENGL ">English                                  - ENGL </option>
+		<option value="ESM  ">Environmental Science &amp; Management       - ESM  </option>
+		<option value="ENV S">Environmental Studies                    - ENV S</option>
+		<option value="ESS  ">Exercise &amp; Sport Studies                 - ESS  </option>
+		<option value="ES   ">Exercise Sport                           - ES   </option>
+		<option value="FEMST">Feminist Studies                         - FEMST</option>
+		<option value="FLMST">Film Studies                             - FLMST</option>
+		<option value="FR   ">French                                   - FR   </option>
+		<option value="GEN S">General Studies (Creative Studies)       - GEN S</option>
+		<option value="GEOG ">Geography                                - GEOG </option>
+		<option value="GER  ">German                                   - GER  </option>
+		<option value="GPS  ">Global Peace and Security                - GPS  </option>
+		<option value="GLOBL">Global Studies                           - GLOBL</option>
+		<option value="GREEK">Greek                                    - GREEK</option>
+		<option value="HEB  ">Hebrew                                   - HEB  </option>
+		<option value="HIST ">History                                  - HIST </option>
+		<option value="INT  ">Interdisciplinary                        - INT  </option>
+		<option value="ITAL ">Italian                                  - ITAL </option>
+		<option value="JAPAN">Japanese                                 - JAPAN</option>
+		<option value="KOR  ">Korean                                   - KOR  </option>
+		<option value="LATIN">Latin                                    - LATIN</option>
+		<option value="LAIS ">Latin American and Iberian Studies       - LAIS </option>
+		<option value="LING ">Linguistics                              - LING </option>
+		<option value="LIT  ">Literature (Creative Studies)            - LIT  </option>
+		<option value="MARSC">Marine Science                           - MARSC</option>
+		<option value="MATRL">Materials                                - MATRL</option>
+		<option value="MATH ">Mathematics                              - MATH </option>
+		<option value="ME   ">Mechanical Engineering                   - ME   </option>
+		<option value="MAT  ">Media Arts and Technology                - MAT  </option>
+		<option value="ME ST">Medieval Studies                         - ME ST</option>
+		<option value="MES  ">Middle East Studies                      - MES  </option>
+		<option value="MS   ">Military Science                         - MS   </option>
+		<option value="MCDB ">Molecular, Cellular &amp; Develop. Biology   - MCDB </option>
+		<option value="MUS  ">Music                                    - MUS  </option>
+		<option value="MUS A">Music Performance Laboratories           - MUS A</option>
+		<option value="PHIL ">Philosophy                               - PHIL </option>
+		<option value="PHYS ">Physics                                  - PHYS </option>
+		<option value="POL S">Political Science                        - POL S</option>
+		<option value="PORT ">Portuguese                               - PORT </option>
+		<option value="PSY  ">Psychology                               - PSY  </option>
+		<option value="RG ST">Religious Studies                        - RG ST</option>
+		<option value="RENST">Renaissance Studies                      - RENST</option>
+		<option value="SLAV ">Slavic                                   - SLAV </option>
+		<option value="SOC  ">Sociology                                - SOC  </option>
+		<option value="SPAN ">Spanish                                  - SPAN </option>
+		<option value="SHS  ">Speech &amp; Hearing Sciences                - SHS  </option>
+		<option value="PSTAT">Statistics &amp; Applied Probability         - PSTAT</option>
+		<option value="TMP  ">Technology Management                    - TMP  </option>
+		<option value="THTR ">Theater                                  - THTR </option>
+		<option value="WRIT ">Writing                                  - WRIT </option>
+
+	</select>
+	<br />
+	Enrollment Code:<input type="text" name="enrollCode" id="enrollCode"> 
+	<button id="add"> Add </button> <br />
+	NOTE: USE ENROLLMENT CODE OF SECTION, NOT LECTURE <br />
+	<img src="img/info.png" />
+
+	</div>
+
+	<table class="classes_table">
+		<thead class="classes_header">
+			<td> Dept </td>
+			<td> Enroll Code </td>
+			<td> Status </td>
+			<td> </td>
+		</thead>
+		<tbody id="classes">
+		</tbody>
+	</table>
+	</form>
+
+
+	<button id="save"> Save </button>
+	<button id="run_now"> Run Now </button>
+
+	<div id="response"> </div>
+
+	</div>
+
+</div>
 </body>
 
 

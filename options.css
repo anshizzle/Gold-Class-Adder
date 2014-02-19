@@ -1,0 +1,46 @@
+body {
+	font-family: arial;
+
+}
+
+.classes_table {
+	width:100%;
+	background-color:white;
+
+	text-align: center;
+}
+
+.classes_header {
+	color: white;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); 
+}
+
+.wrapper {
+	background: #F0F0F0;
+	width:700px;
+	margin:auto;
+	padding-bottom: 5px;
+	/*padding-left: 5px;*/
+	/*padding-right: 5px;*/
+}
+
+#manual_add {
+	display:none;
+}
+
+.donate_slider {
+	background-image:none;
+background:-webkit-linear-gradient(left, #c9de96 0%,#8ab66b 14%,#42a347 67%,#398235 99%); /* Chrome10+,Safari5.1+ */
+}
+
+.inner_wrapper {
+	padding-left: 10px;
+	padding-right: 5px;
+}
+h1 {
+	padding-top: 5px;
+	padding-bottom:5px;
+	width:100%;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); 
+	color:white;
+}

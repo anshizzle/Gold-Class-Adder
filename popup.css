@@ -1,0 +1,20 @@
+body {
+  margin: 5px 10px 10px;
+  width:275px;
+  font-family: arial;
+  /*background-color: black;*/
+}
+
+
+.label { 
+	text-align: center;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); 
+	color: white;
+	/*background-color:navy;*/
+}
+
+table {
+	background-color: white
+}
+
+#classes{ width:100%;}
